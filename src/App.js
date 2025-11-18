@@ -1,11 +1,11 @@
 import Container from "./Container";
+import Header from "./Header";
+import Footer from "./Footer";
 
 function App() {
   return (
     <Container className="container">
-      <header className="header">
-        <h1 className="header__title">Kalkulator walut</h1>
-      </header>
+      <Header title="Kalkulator walut" />
 
       <main>
         <form className="form">
@@ -46,13 +46,7 @@ function App() {
         </form>
       </main>
 
-      <footer>
-        <p>
-          Kursy walut pochodzą ze strony <em>nbp.pl</em> z Tabeli nr
-          214/A/NBP/2025 z dnia 2025-11-04.
-          <br />* pole obowiązkowe
-        </p>
-      </footer>
+      <Footer />
     </Container>
   );
 }
