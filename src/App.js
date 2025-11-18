@@ -1,6 +1,8 @@
+import Container from "./Container";
+
 function App() {
   return (
-    <div className="container">
+    <Container className="container">
       <header className="header">
         <h1 className="header__title">Kalkulator walut</h1>
       </header>
@@ -51,7 +53,7 @@ function App() {
           <br />* pole obowiązkowe
         </p>
       </footer>
-    </div>
+    </Container>
   );
 }
 
