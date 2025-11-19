@@ -39,13 +39,16 @@ const Form = ({ calculateResult, result }) => {
             <label>
               <span className="form__label">Waluta:</span>
               <select
+                value={currency}
+                onChange={({ target }) => setCurrency(target.value)}
                 name="currency"
                 className="form__field"
-                defaultValue="EUR"
               >
-                <option value="EUR">EUR - euro</option>
-                <option value="GBP">GBP - funt</option>
-                <option value="USD">USD - dolar</option>
+                {currencies.map((currency) => (
+                  <option key={currency.shortName} value={currency.shortName}>
+                    {currency.fullName}
+                  </option>
+                ))}
               </select>
             </label>
           </p>
