@@ -1,6 +1,7 @@
 import "./style.css";
 import currencies from "./currencies";
 import { useState } from "react";
+import Result from "./Result";
 
 const Form = ({ calculateResult, result }) => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
@@ -57,7 +58,7 @@ const Form = ({ calculateResult, result }) => {
       <p>
         <button className="form__button">Przelicz</button>
       </p>
-      <p className="form__result"></p>
+      <Result result={result} />
     </form>
   );
 };
