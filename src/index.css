@@ -7,14 +7,13 @@ html {
 }
 
 body {
-    max-width: 500px;
-    margin: 0 auto;
+   
     font-family: "Lato", sans-serif;
     padding: 20px;
-    background-color: #f3eaff;
     background-image: url("background.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;  
+    background-attachment: fixed;
+    min-height: 100vh;  
 }
