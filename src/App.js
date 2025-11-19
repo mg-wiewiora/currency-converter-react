@@ -3,19 +3,26 @@ import Header from "./Header";
 import Footer from "./Footer";
 import Form from "./Form";
 import { useState } from "react";
+import currencies from "./Form/currencies";
 
 function App() {
+  const [result, setResult] = useState();
 
-const [result, setResult] = useState();
+  const calculateResult = (currency, amount) => {
+    const rate = currencies.find(
+      ({ shortName }) => shortName === currency
+    ).rate;
 
-const calculateResult = (currency, amount) => {
-  
-}
+    setResult({
+      resultAmount: amount / rate,
+      currency,
+    });
+  };
 
   return (
     <Container className="container">
       <Header title="Kalkulator walut" />
-      <Form />
+      <Form result={result} calculateResult={calculateResult} />
       <Footer />
     </Container>
   );
