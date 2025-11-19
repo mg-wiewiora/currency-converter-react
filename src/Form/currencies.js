@@ -4,12 +4,16 @@ const currencies = [
     fullName: "EUR - euro",
     rate: 4.26,
   },
-  { shortName: "GBP",
+  {
+    shortName: "GBP",
     fullName: "GBP - funt",
-    rate: 4.84 },
-  { shortName: "USD",
+    rate: 4.84,
+  },
+  {
+    shortName: "USD",
     fullName: "USD - dolar",
-    rate: 3.7 },
+    rate: 3.7,
+  },
 ];
 
 export default currencies;
