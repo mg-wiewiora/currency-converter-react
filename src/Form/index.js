@@ -3,9 +3,21 @@ import currencies from "./currencies";
 import { useState } from "react";
 import Result from "./Result";
 
-const Form = ({ calculateResult, result }) => {
+const Form = () => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
   const [amount, setAmount] = useState("");
+  const [result, setResult] = useState();
+
+  const calculateResult = (currency, amount) => {
+    const rate = currencies.find(
+      ({ shortName }) => shortName === currency
+    ).rate;
+
+    setResult({
+      resultAmount: amount / rate,
+      currency,
+    });
+  };
 
   const onFormSubmit = (event) => {
     event.preventDefault();
