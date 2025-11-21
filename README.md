@@ -1,4 +1,4 @@
-# Currency Converter
+# Currency Converter 💱
 Simple, yet fully functional currency calculator application built with React.
 
 > This project is a simple, single-page application (SPA) created to practice the fundamentals of **React**, focusing on state management, component composition, and handling user input in a controlled form environment.
@@ -8,9 +8,7 @@ Simple, yet fully functional currency calculator application built with React.
 > Language of the page: **Polish**
 >
 
-
 <img width="200" alt=" Currency Converter icon" src="https://github.com/user-attachments/assets/26a64763-aa9d-4051-8afc-b61625a569ae" />
-
 
 ---
 
@@ -30,6 +28,7 @@ This application allows users to convert an amount from Polish Złoty (PLN) to a
 * **Controlled Form:** Manages user input for the amount and selection of the currency using the **`useState` hook**.
 * **Rate Data:** Uses static, predefined exchange rates for calculation.
 * **State Lifting:** Application state (the resulting calculation) is managed in the parent component (`App`) and passed to the child component (`Form`) via props.
+* **Live Clock:** Displays the current date and time, updated every second. The feature uses **React Hooks** to manage the time interval and prevent memory leaks.
 
 ---
 
@@ -53,13 +52,13 @@ This project provided practical experience with:
 2.  **Component Composition:** Building the application using several simple, reusable components (`Header`, `Container`, `Form`, `Result`, `Footer`).
 3.  **Basic Logic Handling:** Implementing the core conversion logic and safely passing the required calculation function as a prop (`calculateResult`).
 4.  **Conditional Rendering:** Safely displaying the result only when the calculation has been performed (e.g., using `result?.resultAmount && !isNaN(...)` for robust rendering).
+5.  **Side Effects & Cleanup:** Utilizing the **`useEffect` hook** with `setInterval` to implement the live clock feature, ensuring **proper cleanup** (`clearInterval`) on component unmount to prevent performance issues and memory leaks.
 
 ---
 
-![gif - how to interact with the page](https://github.com/user-attachments/assets/3de0c9bb-88da-4bf8-97d2-243ab9d1a40f)
+![gif - how to interact with the page](https://github.com/user-attachments/assets/4e6559fe-0869-41ff-927a-ef00d55e6417)
 
-
-![gif - responsiveness of the page](https://github.com/user-attachments/assets/264e5c3a-9235-4a79-ab09-46c47d965748)
+![gif - responsiveness of the page](https://github.com/user-attachments/assets/9c2d504b-26e6-4a48-a92e-68fce7081423)
 
 ---
 
