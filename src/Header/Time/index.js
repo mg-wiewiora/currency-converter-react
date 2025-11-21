@@ -1,6 +1,16 @@
 import { useEffect, useState } from "react";
 import "./style.css";
 
+const currentTime = (date) => date.toLocaleString(undefined, {
+    weekday: "long",
+    hour: "2-digit",
+    minute: "2-digit",
+    second: "2-digit",
+    day: "numeric",
+    month: "long",
+  });
+
+
 const Time = () => {
   const [date, setDate] = useState(new Date());
 
@@ -17,14 +27,7 @@ const Time = () => {
   return (
     <div className="time">
       Dzisiaj jest:&nbsp;
-      {date.toLocaleString(undefined, {
-        weekday: "long",
-        hour: "2-digit",
-        minute: "2-digit",
-        second: "2-digit",
-        day: "numeric",
-        month: "long",
-      })}
+      {currentTime(date)}
     </div>
   );
 };
