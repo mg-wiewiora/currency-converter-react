@@ -1,4 +1,4 @@
-# Currency Converter 💱
+# Currency Converter
 Simple, yet fully functional currency calculator application built with React.
 
 > This project is a simple, single-page application (SPA) created to practice the fundamentals of **React**, focusing on state management, component composition, and handling user input in a controlled form environment.
