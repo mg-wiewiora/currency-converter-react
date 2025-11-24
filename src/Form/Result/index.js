@@ -1,7 +1,7 @@
-import "./style.css";
+import { Wrapper } from "./styled";
 
 const Result = ({ result }) => (
-  <p className="result">
+  <Wrapper>
     {result?.resultAmount && !isNaN(result.resultAmount) && (
       <>
         Wynik to:&nbsp;
@@ -10,7 +10,7 @@ const Result = ({ result }) => (
         </strong>
       </>
     )}
-  </p>
+  </Wrapper>
 );
 
 export default Result;
