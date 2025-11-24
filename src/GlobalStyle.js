@@ -1,3 +1,7 @@
+import { createGlobalStyle } from "styled-components";
+
+export const GlobalStyle = createGlobalStyle`
+
 html {
     box-sizing: border-box;
 }
@@ -16,5 +20,5 @@ body {
     background-position: center;
     background-attachment: fixed;
     min-height: 100vh;
-    background-color: #f3eaff;
+    background-color: ${({ theme }) => theme.color.lilac};
 }
