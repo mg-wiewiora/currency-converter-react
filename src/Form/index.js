@@ -1,7 +1,15 @@
-import "./style.css";
-import currencies from "./currencies";
 import { useState } from "react";
+import currencies from "./currencies";
 import Result from "./Result";
+import {
+  Fieldset,
+  Legend,
+  Container,
+  Section,
+  Label,
+  Field,
+  Button,
+} from "./styled";
 
 const Form = () => {
   const [currency, setCurrency] = useState(currencies[0].shortName);
@@ -12,7 +20,6 @@ const Form = () => {
     const rate = currencies.find(
       ({ shortName }) => shortName === currency
     ).rate;
-
     setResult({
       resultAmount: amount / rate,
       currency,
@@ -25,18 +32,16 @@ const Form = () => {
   };
 
   return (
-    <form className="form" onSubmit={onFormSubmit}>
-      <fieldset className="form__fieldset">
-        <legend className="form__legend">Co chcesz przeliczyć?</legend>
-
-        <div className="form__container">
-          <p className="form__section">
-            <label>
-              <span className="form__label">Kwota w PLN*:</span>
-              <input
+    <form onSubmit={onFormSubmit}>
+      <Fieldset>
+        <Legend>Co chcesz przeliczyć?</Legend>
+        <Container>
+          <Section>
+            <Label>
+              Kwota w PLN*:
+              <Field
                 value={amount}
                 onChange={({ target }) => setAmount(target.value)}
-                className="form__field"
                 type="number"
                 name="amount"
                 step="0.01"
@@ -45,30 +50,29 @@ const Form = () => {
                 autoFocus
                 required
               />
-            </label>
-          </p>
-
-          <p className="form__section">
-            <label>
-              <span className="form__label">Waluta:</span>
-              <select
+            </Label>
+          </Section>
+          <Section>
+            <Label>
+              <span>Waluta:</span>
+              <Field
+                as="select"
                 value={currency}
                 onChange={({ target }) => setCurrency(target.value)}
                 name="currency"
-                className="form__field"
               >
                 {currencies.map((currency) => (
                   <option key={currency.shortName} value={currency.shortName}>
                     {currency.fullName}
                   </option>
                 ))}
-              </select>
-            </label>
-          </p>
-        </div>
-      </fieldset>
+              </Field>
+            </Label>
+          </Section>
+        </Container>
+      </Fieldset>
       <p>
-        <button className="form__button">Przelicz</button>
+        <Button type="submit">Przelicz</Button>
       </p>
       <Result result={result} />
     </form>
