@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import "./style.css";
+import { Wrapper } from "./styled";
 
 const getFormattedTime = (date) => date.toLocaleString(undefined, {
     weekday: "long",
@@ -25,10 +25,10 @@ const Time = () => {
   }, []);
 
   return (
-    <div className="time">
+    <Wrapper>
       Dzisiaj jest:&nbsp;
       {getFormattedTime(date)}
-    </div>
+    </Wrapper>
   );
 };
 
