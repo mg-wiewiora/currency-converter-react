@@ -15,49 +15,38 @@ A simple, fully functional currency calculator built with React.
 
 ---
 
-## Functionality (PLN to Selected Currency)
 
-This application allows users to convert an amount from Polish Złoty (PLN) to a selected foreign currency based on predefined exchange rates.
+## Features
 
-**Key Features:**
-
-* **Conversion:** Calculates the converted amount based on the input value (PLN) and selected currency rate.
-* **Controlled Form:** Manages user input using the **`useState` hook** for amount and currency selection.
-* **Rate Data:** Stores exchange rates in a static JavaScript array.
-* **State Lifting:** The resulting calculation is managed in the parent component and passed to child components via props.
-* **Live Clock:** Displays the current date and time, updated every second using **`useEffect`** with proper cleanup.
-* **Persistent Data:** Optionally stores last used values in **`localStorage`**.
-* **Styled Components:** Uses **styled-components** for modular, theme-based styling.
-* **Custom Hooks:** Implements reusable logic (like the live clock) with custom React hooks.
+* **Currency Conversion:** Converts PLN to selected currencies based on predefined rates.  
+* **Controlled Form:** Uses **`useState`** for input and selection handling.  
+* **Live Clock:** Displays the current date and time, updated every second with **`useEffect`**.  
+* **Reusable Components:** Includes `Header`, `Container`, `Form`, `Result`, `Footer`.  
+* **Styled Components:** Modular, theme-based styling for maintainability.  
+* **Custom Hooks:** Encapsulated logic for reusable functionality, e.g., time tracking.
 
 ---
 
-## Technologies & Focus
+## Technologies
 
-This project emphasizes essential React patterns and modern JavaScript practices:
-
-* **Framework:** React
-* **Language:** JavaScript (ES6+)
-* **State Management:** `useState` for component state
-* **Side Effects:** `useEffect` for time updates and other effects
-* **Styling:** **styled-components** with theming
-* **Data Storage:** `localStorage` for persistent state
-* **Custom Hooks:** Encapsulated reusable logic (e.g., live date/time)
+* **React** (Functional Components, Hooks)  
+* **JavaScript (ES6+)**  
+* **State Management:** `useState`  
+* **Side Effects:** `useEffect`  
+* **Styling:** styled-components with theme support  
+* **Custom Hooks:** Encapsulated reusable logic
 
 ---
 
-## Key Learning Points
+## Learning Outcomes
 
-This project provided practical experience with:
-
-1. **Controlled Forms:** Linking `<input>` and `<select>` elements to state via `value` and `onChange`.
-2. **Component Composition:** Breaking the UI into reusable components (`Header`, `Container`, `Form`, `Result`, `Footer`).
-3. **Core Logic Handling:** Implementing currency conversion and safely passing calculation functions as props.
-4. **Conditional Rendering:** Displaying results only after calculation.
-5. **Side Effects & Cleanup:** Using `useEffect` to handle intervals for the live clock, ensuring cleanup with `clearInterval`.
-6. **Theming & Styled Components:** Centralized styles with `ThemeProvider` and modular styled-components.
-7. **Persistent State:** Using `localStorage` to remember user selections or last input.
-8. **Custom Hooks:** Creating reusable hooks to encapsulate logic like time tracking.
+1. **Controlled Forms:** Connecting inputs and selects to component state.  
+2. **Component Composition:** Building a clean, reusable component structure.  
+3. **Logic Handling:** Safe and reusable conversion calculation.  
+4. **Conditional Rendering:** Showing results only when available.  
+5. **Side Effects & Cleanup:** Using `useEffect` with proper cleanup for intervals.  
+6. **Theming & Styling:** Centralized, modular styling with styled-components.  
+7. **Custom Hooks:** Creating reusable hooks for shared logic.
 
 ---
 
