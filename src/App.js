@@ -5,7 +5,7 @@ import Form from "./Form";
 
 function App() {
   return (
-    <Container className="container">
+    <Container>
       <Header title="Kalkulator walut" />
       <Form />
       <Footer />

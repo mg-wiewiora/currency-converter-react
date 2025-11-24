@@ -1,4 +1,5 @@
 import { createGlobalStyle } from "styled-components";
+import background from "./background.png";
 
 export const GlobalStyle = createGlobalStyle`
 
@@ -11,15 +12,15 @@ html {
 }
 
 body {
-
-    font-family: "Lato", sans-serif;
-    padding: 20px;
-    background-image: url("background.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    min-height: 100vh;
-    background-color: ${({ theme }) => theme.color.lilac};
+  font-family: "Lato", sans-serif;
+  padding: 20px;
+  background-image: url("${background}");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  background-color: ${({ theme }) => theme.color.lilac};
 }
+
 `;
