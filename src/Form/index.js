@@ -7,7 +7,7 @@ import {
   Container,
   Section,
   Label,
-  Field,
+  Input,
   Button,
 } from "./styled";
 
@@ -39,7 +39,7 @@ const Form = () => {
           <Section>
             <Label>
               Kwota w PLN*:
-              <Field
+              <Input
                 value={amount}
                 onChange={({ target }) => setAmount(target.value)}
                 type="number"
@@ -54,8 +54,8 @@ const Form = () => {
           </Section>
           <Section>
             <Label>
-              <span>Waluta:</span>
-              <Field
+              Waluta:
+              <Input
                 as="select"
                 value={currency}
                 onChange={({ target }) => setCurrency(target.value)}
@@ -66,7 +66,7 @@ const Form = () => {
                     {currency.fullName}
                   </option>
                 ))}
-              </Field>
+              </Input>
             </Label>
           </Section>
         </Container>

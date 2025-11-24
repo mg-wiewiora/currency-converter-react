@@ -45,7 +45,7 @@ export const Label = styled.label`
   color: ${({ theme }) => theme.color.graphite};
 `;
 
-export const Field = styled.input`
+export const Input = styled.input`
   padding: 7px;
   border-radius: 5px;
   width: 100%;
