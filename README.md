@@ -27,7 +27,7 @@ A simple, fully functional currency calculator built with React.
 
 ---
 
-## Technologies
+## Technologies Used
 
 * **React** (Functional Components, Hooks)  
 * **JavaScript (ES6+)**  
@@ -38,7 +38,7 @@ A simple, fully functional currency calculator built with React.
 
 ---
 
-## Learning Outcomes
+## Key Learning Points
 
 1. **Controlled Forms:** Connecting inputs and selects to component state.  
 2. **Component Composition:** Building a clean, reusable component structure.  
