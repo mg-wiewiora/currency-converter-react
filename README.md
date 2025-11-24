@@ -1,14 +1,11 @@
 # Currency Converter
-Simple, yet fully functional currency calculator application built with React.
+A simple, fully functional currency calculator built with React.
 
-> This project is a simple, single-page application (SPA) created to practice the fundamentals of **React**, focusing on state management, component composition, and handling user input in a controlled form environment.
+> This single-page application (SPA) was created to practice **React fundamentals**, focusing on state management, component composition, and controlled form handling.
 
-> This project was created as part of learning Front-end fundamentals.
->
 > Language of the page: **Polish**
->
 
-<img width="200" alt=" Currency Converter icon" src="https://github.com/user-attachments/assets/26a64763-aa9d-4051-8afc-b61625a569ae" />
+<img width="200" alt="Currency Converter icon" src="https://github.com/user-attachments/assets/26a64763-aa9d-4051-8afc-b61625a569ae" />
 
 ---
 
@@ -20,27 +17,32 @@ Simple, yet fully functional currency calculator application built with React.
 
 ## Functionality (PLN to Selected Currency)
 
-This application allows users to convert an amount from Polish Złoty (PLN) to a selected foreign currency based on a predefined exchange rate table.
+This application allows users to convert an amount from Polish Złoty (PLN) to a selected foreign currency based on predefined exchange rates.
 
 **Key Features:**
 
-* **Conversion:** Calculates the converted amount based on the input value (PLN) and the selected currency rate.
-* **Controlled Form:** Manages user input for the amount and selection of the currency using the **`useState` hook**.
-* **Rate Data:** Uses static, predefined exchange rates for calculation.
-* **State Lifting:** Application state (the resulting calculation) is managed in the parent component (`App`) and passed to the child component (`Form`) via props.
-* **Live Clock:** Displays the current date and time, updated every second. The feature uses **React Hooks** to manage the time interval and prevent memory leaks.
+* **Conversion:** Calculates the converted amount based on the input value (PLN) and selected currency rate.
+* **Controlled Form:** Manages user input using the **`useState` hook** for amount and currency selection.
+* **Rate Data:** Stores exchange rates in a static JavaScript array.
+* **State Lifting:** The resulting calculation is managed in the parent component and passed to child components via props.
+* **Live Clock:** Displays the current date and time, updated every second using **`useEffect`** with proper cleanup.
+* **Persistent Data:** Optionally stores last used values in **`localStorage`**.
+* **Styled Components:** Uses **styled-components** for modular, theme-based styling.
+* **Custom Hooks:** Implements reusable logic (like the live clock) with custom React hooks.
 
 ---
 
 ## Technologies & Focus
 
-The project emphasizes essential React principles and modern JavaScript practices for form handling.
+This project emphasizes essential React patterns and modern JavaScript practices:
 
-* **Framework:** **React**
+* **Framework:** React
 * **Language:** JavaScript (ES6+)
-* **State Management:** **`useState` hook** for all application state.
-* **Styling:** Standard **CSS** utilizing the **BEM** conventions for organization and basic responsiveness (`@media` queries).
-* **Data Structure:** Uses a **JavaScript array of objects** to store currency data and exchange rates.
+* **State Management:** `useState` for component state
+* **Side Effects:** `useEffect` for time updates and other effects
+* **Styling:** **styled-components** with theming
+* **Data Storage:** `localStorage` for persistent state
+* **Custom Hooks:** Encapsulated reusable logic (e.g., live date/time)
 
 ---
 
@@ -48,11 +50,14 @@ The project emphasizes essential React principles and modern JavaScript practice
 
 This project provided practical experience with:
 
-1.  **Controlled Forms:** Mastering the connection between form elements (`<input>`, `<select>`) and the component's state using `value` and `onChange` handlers.
-2.  **Component Composition:** Building the application using several simple, reusable components (`Header`, `Container`, `Form`, `Result`, `Footer`).
-3.  **Basic Logic Handling:** Implementing the core conversion logic and safely passing the required calculation function as a prop (`calculateResult`).
-4.  **Conditional Rendering:** Safely displaying the result only when the calculation has been performed (e.g., using `result?.resultAmount && !isNaN(...)` for robust rendering).
-5.  **Side Effects & Cleanup:** Utilizing the **`useEffect` hook** with `setInterval` to implement the live clock feature, ensuring **proper cleanup** (`clearInterval`) on component unmount to prevent performance issues and memory leaks.
+1. **Controlled Forms:** Linking `<input>` and `<select>` elements to state via `value` and `onChange`.
+2. **Component Composition:** Breaking the UI into reusable components (`Header`, `Container`, `Form`, `Result`, `Footer`).
+3. **Core Logic Handling:** Implementing currency conversion and safely passing calculation functions as props.
+4. **Conditional Rendering:** Displaying results only after calculation.
+5. **Side Effects & Cleanup:** Using `useEffect` to handle intervals for the live clock, ensuring cleanup with `clearInterval`.
+6. **Theming & Styled Components:** Centralized styles with `ThemeProvider` and modular styled-components.
+7. **Persistent State:** Using `localStorage` to remember user selections or last input.
+8. **Custom Hooks:** Creating reusable hooks to encapsulate logic like time tracking.
 
 ---
 
