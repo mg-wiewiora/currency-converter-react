@@ -1,7 +1,7 @@
 # Currency Converter
 A simple, fully functional currency calculator built with React.
 
-> This single-page application (SPA) was created to practice **React fundamentals**, focusing on state management, component composition, and controlled form handling.
+> This single-page application (SPA) was created to practice **React fundamentals**, focusing on state management, component composition, controlled forms, and API integration.
 
 > Language of the page: **Polish**
 
@@ -15,15 +15,15 @@ A simple, fully functional currency calculator built with React.
 
 ---
 
-
 ## Features
 
-* **Currency Conversion:** Converts PLN to selected currencies based on predefined rates.  
-* **Controlled Form:** Uses **`useState`** for input and selection handling.  
+* **Currency Conversion:** Converts PLN to selected currencies using live exchange rates from [currencyapi.com](https://www.currencyapi.com).  
+* **Controlled Form:** Uses **`useState`** for input and currency selection handling.  
 * **Live Clock:** Displays the current date and time, updated every second with **`useEffect`**.  
 * **Reusable Components:** Includes `Header`, `Container`, `Form`, `Result`, `Footer`.  
 * **Styled Components:** Modular, theme-based styling for maintainability.  
-* **Custom Hooks:** Encapsulated logic for reusable functionality, e.g., time tracking.
+* **Custom Hooks:** Encapsulated logic for reusable functionality (`useRates` for API data, `useCurrentDate` for time tracking).  
+* **Conditional Rendering:** Footer and result display only after successful data fetch.
 
 ---
 
@@ -34,6 +34,7 @@ A simple, fully functional currency calculator built with React.
 * **State Management:** `useState`  
 * **Side Effects:** `useEffect`  
 * **Styling:** styled-components with theme support  
+* **API Integration:** Fetching live currency rates via `fetch` or `axios`  
 * **Custom Hooks:** Encapsulated reusable logic
 
 ---
@@ -43,16 +44,20 @@ A simple, fully functional currency calculator built with React.
 1. **Controlled Forms:** Connecting inputs and selects to component state.  
 2. **Component Composition:** Building a clean, reusable component structure.  
 3. **Logic Handling:** Safe and reusable conversion calculation.  
-4. **Conditional Rendering:** Showing results only when available.  
-5. **Side Effects & Cleanup:** Using `useEffect` with proper cleanup for intervals.  
+4. **Conditional Rendering:** Showing results and footer content only after successful API response.  
+5. **Side Effects & Cleanup:** Using `useEffect` with proper cleanup for intervals and API requests.  
 6. **Theming & Styling:** Centralized, modular styling with styled-components.  
-7. **Custom Hooks:** Creating reusable hooks for shared logic.
+7. **Custom Hooks:** Creating reusable hooks (`useRates`, `useCurrentDate`) for shared logic.
 
 ---
 
-![gif - how to interact with the page](https://github.com/user-attachments/assets/4e6559fe-0869-41ff-927a-ef00d55e6417)
+![gif - how to interact with the page](https://github.com/user-attachments/assets/b3de3f6b-497d-4c05-a19b-76aed7432b0d)
 
-![gif - responsiveness of the page](https://github.com/user-attachments/assets/9c2d504b-26e6-4a48-a92e-68fce7081423)
+
+![gif - responsiveness of the page](https://github.com/user-attachments/assets/d944c895-cc70-4857-8c4e-9ebc48fc6886)
+
+
+![gif - custom error message](https://github.com/user-attachments/assets/63b08c6e-eecf-4e80-ad4a-727ee27e7ab0)
 
 ---
 
