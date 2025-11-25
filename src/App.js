@@ -1,4 +1,4 @@
-import Container from "./Container";
+import { Container } from "./Container/styled";
 import Header from "./Header";
 import Footer from "./Footer";
 import Form from "./Form";

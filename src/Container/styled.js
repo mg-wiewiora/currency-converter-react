@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-export const Wrapper = styled.main`
+export const Container = styled.main`
   max-width: 500px;
   margin: 0 auto;
   color: ${({ theme }) => theme.color.graphite};
