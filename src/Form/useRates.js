@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 
 export const useRates = () => {
   const [ratesData, setRatesData] = useState({
@@ -8,15 +9,9 @@ export const useRates = () => {
   useEffect(() => {
     const fetchRates = async () => {
       try {
-        const response = await fetch(
+        const { data } = await axios.get(
           "https://api.currencyapi.com/v3/latest?apikey=cur_live_80LQwMpNQwXW2ZC7J5jGvATB053UFBjRWxshNxQ4&base_currency=PLN&currencies=EUR,USD,GBP,CHF,JPY,AUD,CAD,SEK"
         );
-
-        if (!response.ok) {
-          throw new Error(response.statusText);
-        }
-
-        const data = await response.json();
 
         setRatesData({
           state: "success",
@@ -29,6 +24,7 @@ export const useRates = () => {
         });
       }
     };
+
     setTimeout(fetchRates, 1500);
   }, []);
 
