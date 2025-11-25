@@ -1,6 +1,9 @@
 import { Wrapper } from "./styled";
+import { useRates } from "../Form/useRates";
 
-const Footer = ({ ratesData }) => {
+const Footer = () => {
+  const ratesData = useRates();
+
   if (ratesData?.state !== "success") return null;
 
   return (
