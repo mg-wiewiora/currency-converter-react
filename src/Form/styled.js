@@ -74,3 +74,11 @@ export const Button = styled.button`
     filter: brightness(120%);
   }
 `;
+
+export const Loading = styled.p`
+ color: ${({ theme }) => theme.color.violet};
+`;
+
+export const ErrorMessage = styled.p`
+ color: ${({ theme }) => theme.color.red};
+`;

@@ -27,7 +27,7 @@ useEffect(() => {
             });
         }
     };
-    setTimeout(fetchRates,1000);
+    setTimeout(fetchRates,1500);
 }, []);
 
 return ratesData;

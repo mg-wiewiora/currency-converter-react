@@ -5,11 +5,3 @@ export const Wrapper = styled.p`
   font-size: 25px;
   text-align: center;
 `;
-
-export const Loading = styled.p`
- color: ${({ theme }) => theme.color.violet};
-`;
-
-export const Error = styled.p`
- color: ${({ theme }) => theme.color.red};
-`;
